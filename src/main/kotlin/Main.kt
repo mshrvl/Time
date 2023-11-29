@@ -1,7 +1,4 @@
 fun main() {
-    val lastOnlineSeconds = 3600 // Replace this with the actual seconds since last online
-    val textRepresentation = agoToText(lastOnlineSeconds)
-    println(textRepresentation)
 }
 
 fun agoToText(time: Int): String {
@@ -14,3 +11,5 @@ fun agoToText(time: Int): String {
         else -> "давно"
     }
 }
+
+fun wordInTime()
