@@ -1,7 +1,16 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    val lastOnlineSeconds = 3600 // Replace this with the actual seconds since last online
+    val textRepresentation = agoToText(lastOnlineSeconds)
+    println(textRepresentation)
+}
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun agoToText(time: Int): String {
+    return when {
+        time <= 60 -> "был(а) только что"
+        time <= 60 * 60 -> " назад"
+        time <= 24 * 60 * 60 -> " назад"
+        time <= 2 * 24 * 60 * 60 -> "вчера"
+        time <= 3 * 24 * 60 * 60 -> "позавчера"
+        else -> "давно"
+    }
 }
