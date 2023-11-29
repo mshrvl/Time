@@ -12,4 +12,4 @@ fun agoToText(time: Int): String {
     }
 }
 
-fun wordInTime()
+fun wordInTime() {}
